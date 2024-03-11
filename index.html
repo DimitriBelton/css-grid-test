@@ -3,25 +3,125 @@
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles2.css">
     <title>CSS Grid Tutorial</title>
+    <style>
+        /* Definiert das Aussehen der Gitterelemente */
+        .item {
+            /* ... bestehender Code ... */
+
+            /* Fügt einen Übergangseffekt hinzu */
+            transition: transform 0.5s, box-shadow 0.5s, background-color 0.5s;
+
+            /* Ändert die Hintergrundfarbe */
+            background-color: #0d1137; /* Dunkelblau */
+
+            /* Fügt einen Schatten hinzu */
+            box-shadow: 0 0 10px #00ff00; /* Leuchtendes Grün */
+
+            /* Fügt einen Rand hinzu */
+            border: 2px solid #00ff00; /* Leuchtendes Grün */
+        }
+
+        /* Definiert das Aussehen der Gitterelemente beim Überfahren mit der Maus */
+        .item:hover {
+            /* ... bestehender Code ... */
+
+            /* Ändert die Hintergrundfarbe */
+            background-color: #1a1a2e; /* Hellblau */
+
+            /* Dreht das Element */
+            transform: scale(1.05) rotate(10deg);
+
+            /* Ändert den Schatten */
+            box-shadow: 0 0 20px #00ff00, 0 0 30px #00ff00, 0 0 40px #00ff00; /* Leuchtendes Grün */
+
+            /* Ändert den Rand */
+            border: 2px solid #00ff00; /* Leuchtendes Grün */
+        }
+
+        /* Definiert das Aussehen des Zurück-nach-oben-Buttons */
+        #myBtn {
+            display: none; /* Versteckt den Button standardmäßig */
+            position: fixed; /* Fixiert die Position des Buttons */
+            bottom: 20px; /* Positioniert den Button 20px vom unteren Rand entfernt */
+            right: 30px; /* Positioniert den Button 30px vom rechten Rand entfernt */
+            z-index: 99; /* Stellt sicher, dass der Button über anderen Elementen angezeigt wird */
+            border: none; /* Entfernt den Rand */
+            outline: none; /* Entfernt den Umriss */
+            background-color: #00ff00; /* Leuchtendes Grün */
+            color: white; /* Weiße Schrift */
+            cursor: pointer; /* Ändert den Mauszeiger beim Überfahren des Buttons */
+            padding: 15px; /* Fügt Polsterung hinzu */
+            border-radius: 10px; /* Rundet die Ecken des Buttons ab */
+        }
+
+        #myBtn:hover {
+            background-color: #555; /* Ändert die Hintergrundfarbe beim Überfahren des Buttons */
+        }
+    </style>
 </head>
 <body>
     <!-- Hinzufügen eines Bildes namens "new-bild.jpg" -->
     <img src="new-bild.jpg" alt="Neues Bild">
-    <h1>Willkommen zu meiner kreativen CSS Grid Galerie!</h1>
+    <h1 style="color: #00ff00; font-family: 'Courier New', Courier, monospace;">Willkommen zu meiner kreativen CSS Grid Galerie!</h1>
     <div class="container">
-        <div class="item one">🌞 Sonnenaufgang</div>
-        <div class="item two">🌳 Natur</div>
-        <div class="item three">🎵 Musik</div>
-        <div class="item four">📚 Wissen</div>
-        <div class="item five">🚀 Wissenschaft</div>
-        <div class="item six">🎨 Kunst</div>
-        <div class="item seven">🏞️ Landschaft</div>
-        <div class="item eight">🌌 Universum</div>
-        <div class="item nine">🍎 Gesundheit</div>
-        <div class="item ten">🌐 Technologie</div>
-        <div class="item eleven">📖 Literatur</div>
-        <div class="item twelve">🎬 Kino</div>
+        <!-- Hinzufügen von interaktiven Elementen -->
+        <a href="#sonnenaufgang" class="item one">🌞 Sonnenaufgang</a>
+        <a href="#natur" class="item two">🌳 Natur</a>
+        <a href="#musik" class="item three">🎵 Musik</a>
+        <a href="#wissen" class="item four">📚 Wissen</a>
+        <a href="#wissenschaft" class="item five">🚀 Wissenschaft</a>
+        <a href="#kunst" class="item six">🎨 Kunst</a>
+        <a href="#landschaft" class="item seven">🏞️ Landschaft</a>
+        <a href="#universum" class="item eight">🌌 Universum</a>
+        <a href="#gesundheit" class="item nine">🍎 Gesundheit</a>
+        <a href="#technologie" class="item ten">🌐 Technologie</a>
+        <a href="#literatur" class="item eleven">📖 Literatur</a>
+        <a href="#kino" class="item twelve">🎬 Kino</a>
     </div>
+    <!-- Hinzufügen eines Fußbereichs -->
+    <footer style="color: #00ff00; font-family: 'Courier New', Courier, monospace; text-align: center;">
+        <p>© 2024 Meine kreative CSS Grid Galerie. Alle Rechte vorbehalten.</p>
+    </footer>
+    <!-- Hinzufügen eines Zurück-nach-oben-Buttons -->
+    <button onclick="topFunction()" id="myBtn" title="Go to top">Nach oben</button>
+
+    <script src="meinSkript.js"></script>
 </body>
-</html> 
+</html>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles2.css">
+    <title>CSS Grid Tutorial</title>
+    <style>
+        /* Definiert das Aussehen der Navigationsleiste */
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background-color: #f8f9fa;
+        }
+        /* Ihr restlicher CSS-Code hier */
+    </style>
+</head>
+<body>
+    <!-- Hinzufügen einer Navigationsleiste -->
+    <nav>
+        <ul>
+            
+        </ul>
+    </nav>
+    <!-- Ihr HTML-Code hier -->
+    <script src="meinSkript.js"></script>
+</body>
+</html>
+
+<li><a href="#home">Home</a></li>
+<li><a href="#news">News</a></li>
+<li><a href="#contact">Contact</a></li>
+<li><a href="about.html">About Me</a></li> <!-- Verweis auf die "About Me"-Seite -->

@@ -1,0 +1,98 @@
+/* Definiert das Aussehen der Navigationsleiste */
+nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #0d1137;
+    color: #00ff00;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+nav li {
+    float: left;
+}
+
+nav li a {
+    display: block;
+    color: #00ff00;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+nav li a:hover {
+    background-color: #1a1a2e;
+}
+
+/* Definiert das Aussehen des Kontaktformulars */
+.contact-form {
+    width: 50%;
+    margin: 100px auto;
+    padding: 20px;
+    background-color: #0d1137;
+    color: #00ff00;
+    font-family: 'Courier New', Courier, monospace;
+    box-shadow: 0 0 10px #00ff00;
+    border: 2px solid #00ff00;
+}
+
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form textarea {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    background-color: #1a1a2e;
+    color: #00ff00;
+    border: 2px solid #00ff00;
+}
+
+.contact-form input[type="submit"] {
+    background-color: #00ff00;
+    color: #0d1137;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.5s;
+}
+
+.contact-form input[type="submit"]:hover {
+    background-color: #1a1a2e;
+    color: #00ff00;
+}
+
+/* Definiert das Aussehen des animierten Fußbereichs */
+footer .animation {
+    width: 100px;
+    height: 100px;
+    background-color: #00ff00;
+    animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Hinzufügen eines sich ständig ändernden Hintergrunds */
+body {
+    animation: colorchange 30s infinite;
+}
+
+@keyframes colorchange {
+    0% { background: #ff0000; }
+    14% { background: #ff7700; }
+    28% { background: #ffff00; }
+    42% { background: #77ff00; }
+    57% { background: #00ff00; }
+    71% { background: #00ff77; }
+    85% { background: #00ffff; }
+    100% { background: #0000ff; }
+}

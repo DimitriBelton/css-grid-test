@@ -1,0 +1,53 @@
+/* Definiert das Aussehen der Gitterelemente */
+.item {
+    /* ... bestehender Code ... */
+
+    /* Fügt einen Übergangseffekt hinzu */
+    transition: transform 0.5s, box-shadow 0.5s, background-color 0.5s;
+
+    /* Ändert die Hintergrundfarbe */
+    background-color: #0d1137; /* Dunkelblau */
+
+    /* Fügt einen Schatten hinzu */
+    box-shadow: 0 0 10px #00ff00; /* Leuchtendes Grün */
+
+    /* Fügt einen Rand hinzu */
+    border: 2px solid #00ff00; /* Leuchtendes Grün */
+}
+
+/* Definiert das Aussehen der Gitterelemente beim Überfahren mit der Maus */
+.item:hover {
+    /* ... bestehender Code ... */
+
+    /* Ändert die Hintergrundfarbe */
+    background-color: #1a1a2e; /* Hellblau */
+
+    /* Dreht das Element */
+    transform: scale(1.05) rotate(10deg);
+
+    /* Ändert den Schatten */
+    box-shadow: 0 0 20px #00ff00, 0 0 30px #00ff00, 0 0 40px #00ff00; /* Leuchtendes Grün */
+
+    /* Ändert den Rand */
+    border: 2px solid #00ff00; /* Leuchtendes Grün */
+}
+
+/* Definiert das Aussehen des Zurück-nach-oben-Buttons */
+#myBtn {
+    display: none; /* Versteckt den Button standardmäßig */
+    position: fixed; /* Fixiert die Position des Buttons */
+    bottom: 20px; /* Positioniert den Button 20px vom unteren Rand entfernt */
+    right: 30px; /* Positioniert den Button 30px vom rechten Rand entfernt */
+    z-index: 99; /* Stellt sicher, dass der Button über anderen Elementen angezeigt wird */
+    border: none; /* Entfernt den Rand */
+    outline: none; /* Entfernt den Umriss */
+    background-color: #00ff00; /* Leuchtendes Grün */
+    color: white; /* Weiße Schrift */
+    cursor: pointer; /* Ändert den Mauszeiger beim Überfahren des Buttons */
+    padding: 15px; /* Fügt Polsterung hinzu */
+    border-radius: 10px; /* Rundet die Ecken des Buttons ab */
+}
+
+#myBtn:hover {
+    background-color: #555; /* Ändert die Hintergrundfarbe beim Überfahren des Buttons */
+}
