@@ -1,38 +1,125 @@
+/* Definiert die Schriftart, den Hintergrund, den Abstand und die Textfarbe des gesamten Dokuments */
+body {
+    font-family: Arial, sans-serif; /* Schriftart */
+    background: linear-gradient(45deg, #f3ec78, #af4261); /* Hintergrundfarbe als linearer Gradient */
+    padding: 20px; /* Abstand um den Inhalt */
+    color: white; /* Textfarbe */
+}
+
+/* Definiert das Aussehen des h1-Elements (Überschrift) */
+h1 {
+    text-align: center; /* Zentriert den Text */
+    color: white; /* Textfarbe */
+    text-shadow: 2px 2px 4px #000000; /* Textschatten */
+    font-size: 2em; /* Schriftgröße */
+    margin-bottom: 0.5em; /* Abstand unter der Überschrift */
+}
+
+/* Definiert das Aussehen des Containers, der die Gitterelemente enthält */
 .container {
-    display: grid;
-    height: 100vh;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(3, 1fr);
-    column-gap: 10px;
-    row-gap: 20px;
+    display: grid; /* Setzt das Anzeigeverhalten auf Gitter */
+    grid-template-columns: repeat(4, 1fr); /* Definiert vier gleich große Spalten */
+    grid-gap: 20px; /* Abstand zwischen den Gitterelementen */
+    padding: 20px; /* Abstand um den Inhalt */
+    background-color: rgba(255, 255, 255, 0.8); /* Hintergrundfarbe */
+    border-radius: 15px; /* Abrundung der Ecken */
+    box-shadow: 0px 0px 10px rgba(0,0,0,0.5); /* Schatten um den Container */
+    animation: containerPulse 2s infinite; /* Animation, die den Schatten pulsieren lässt */
 }
-
+  
+/* Definiert das Aussehen der Gitterelemente */
 .item {
-    background-color: blueviolet;
-    color: white;
-    font-weight: bold;
+    background-color: #f9f9f9; /* Hintergrundfarbe */
+    border: 2px solid #ddd; /* Rahmen um das Element */
+    padding: 30px; /* Abstand um den Inhalt */
+    font-size: 20px; /* Schriftgröße */
+    text-align: center; /* Zentriert den Text */
+    transition: transform 0.5s, box-shadow 0.5s; /* Übergangseffekt für die Transformation und den Schatten */
+    border-radius: 15px; /* Abrundung der Ecken */
+    box-shadow: 0px 0px 10px rgba(0,0,0,0.1); /* Schatten um das Element */
+    animation: itemRotate 5s infinite; /* Animation, die das Element drehen lässt */
+    display: flex; /* Setzt das Anzeigeverhalten auf Flexbox */
+    align-items: center; /* Zentriert den Inhalt vertikal */
+    justify-content: center; /* Zentriert den Inhalt horizontal */
+    flex-direction: column; /* Legt die Richtung der Flexbox-Elemente fest */
+}
+  
+/* Definiert das Aussehen der Gitterelemente beim Überfahren mit der Maus */
+.item:hover {
+    transform: scale(1.05); /* Vergrößert das Element */
+    box-shadow: 0px 0px 20px rgba(0,0,0,0.3); /* Vergrößert den Schatten */
+}
+  
+/* Definiert die Hintergrundfarben der einzelnen Gitterelemente */
+.one { background-color: #fa8072; }
+.two { background-color: #7fffd4; }
+.three { background-color: #f0e68c; }
+.four { background-color: #dda0dd; }
+.five { background-color: #add8e6; }
+.six { background-color: #90ee90; }
+.seven { background-color: #ffb6c1; }
+.eight { background-color: #ff6347; }
+.nine { background-color: #3cb371; }
+.ten { background-color: #b0e0e6; }
+.eleven { background-color: #ff7f50; }
+.twelve { background-color: #ba55d3; }
+
+/* Definiert die Animation, die den Schatten des Containers pulsieren lässt */
+@keyframes containerPulse {
+    0% { box-shadow: 0px 0px 10px rgba(0,0,0,0.5); }
+    50% { box-shadow: 0px 0px 20px rgba(0,0,0,0.5); }
+    100% { box-shadow: 0px 0px 10px rgba(0,0,0,0.5); }
 }
 
-.one {
-    background-color: rgb(106, 176, 37);
+/* Definiert die Animation, die die Gitterelemente drehen lässt */
+@keyframes itemRotate {
+    0% { transform: rotate(0deg); }
+    50% { transform: rotate(180deg); }
+    100% { transform: rotate(360deg); }
+}
+/* Fügt eine Animation hininzu, die den Hintergrund kontinuierlich ändert */
+@keyframes backgroundFade {
+    0% { background: #f3ec78; }
+    25% { background: #af4261; }
+    50% { background: #12c2e9; }
+    75% { background: #c471ed; }
+    100% { background: #f3ec78; }
 }
 
-.two {
-    background-color: chocolate;
+body {
+    /* ... Ihre bisherigen Stile ... */
+    animation: backgroundFade 10s infinite;
 }
 
-.three {
-    background-color: rgb(54, 212, 212);
-    grid-column-start: 1;
-    grid-column-end: 3;
-    grid-row-start: 1;
-    grid-row-end: 3;
+/* Definiert die Animation, die den Hintergrund kontinuierlich bewegt */
+@keyframes backgroundMove {
+    0% { background-position: 0% 0%; }
+    100% { background-position: 100% 100%; }
 }
 
-.four {
-    order: 4;
-    grid-column-start: 1;
-    grid-column-end: 3;
-    grid-row-start: 3;
-    grid-row-end: 4;
+body {
+    /* ... Ihre bisherigen Stile ... */
+    background-size: 200% 200%; /* Erweitert die Größe des Hintergrunds */
+    animation: backgroundFade 10s infinite, backgroundMove 10s infinite; /* Fügt die Bewegungsanimation hinzu */
+}
+/* Importieren Sie Google-Schriftarten */
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+/* Definiert die Schriftart, den Hintergrund, den Abstand und die Textfarbe des gesamten Dokuments */
+body {
+    font-family: 'Roboto', sans-serif; /* Verwenden Sie die Google-Schriftart */
+    background: linear-gradient(45deg, #f3ec78, #af4261); /* Hintergrundfarbe als linearer Gradient */
+    padding: 20px; /* Abstand um den Inhalt */
+    color: white; /* Textfarbe */
+    animation: backgroundFade 10s infinite, backgroundMove 10s infinite; /* Fügt die Bewegungsanimation hinzu */
+    background-size: 200% 200%; /* Erweitert die Größe des Hintergrunds */
+}
+
+/* ... Rest des Codes ... */
+
+/* Definiert das Aussehen der Gitterelemente beim Überfahren mit der Maus */
+.item:hover {
+    transform: scale(1.05); /* Vergrößert das Element */
+    box-shadow: 0px 0px 20px rgba(0,0,0,0.3); /* Vergrößert den Schatten */
+    transition: transform 0.5s, box-shadow 0.5s; /* Fügt einen Übergangseffekt hinzu */
 }
